@@ -35,8 +35,8 @@ O projeto foi desenvolvido utilizando os princípios de Programação Orientada 
 
 ### Controles do iPhone
 
-- **Ligar**: Ativa o dispositivo
-- **Desligar**: Desativa o dispositivo
+- **Ligar**: Ligar o dispositivo
+- **Desligar**: Desligar o dispositivo
 - **Reiniciar**: Reinicializa o dispositivo
 
 ### Reprodutor Musical
