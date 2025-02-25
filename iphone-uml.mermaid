@@ -1,0 +1,62 @@
+classDiagram
+    class iPhone {
+        -ReprodutorMusical reprodutorMusical
+        -AparelhoTelefonico aparelhoTelefonico
+        -NavegadorInternet navegadorInternet
+        +ligar()
+        +desligar()
+        +reiniciar()
+    }
+
+    class ReprodutorMusical {
+        <<interface>>
+        +tocar()
+        +pausar()
+        +selecionarMusica(String musica)
+    }
+
+    class AparelhoTelefonico {
+        <<interface>>
+        +ligar(String numero)
+        +atender()
+        +iniciarCorreioVoz()
+    }
+
+    class NavegadorInternet {
+        <<interface>>
+        +exibirPagina(String url)
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
+
+    class ReprodutorMusicalImpl {
+        -String musicaAtual
+        -boolean tocando
+        +tocar()
+        +pausar()
+        +selecionarMusica(String musica)
+    }
+
+    class AparelhoTelefonicoImpl {
+        -String numeroAtual
+        -boolean emChamada
+        +ligar(String numero)
+        +atender()
+        +iniciarCorreioVoz()
+    }
+
+    class NavegadorInternetImpl {
+        -String urlAtual
+        -List~String~ historico
+        +exibirPagina(String url)
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
+
+    iPhone *-- ReprodutorMusicalImpl
+    iPhone *-- AparelhoTelefonicoImpl
+    iPhone *-- NavegadorInternetImpl
+    
+    ReprodutorMusicalImpl ..|> ReprodutorMusical
+    AparelhoTelefonicoImpl ..|> AparelhoTelefonico
+    NavegadorInternetImpl ..|> NavegadorInternet
