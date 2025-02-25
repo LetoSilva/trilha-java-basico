@@ -163,7 +163,7 @@ java Main
 
 - Java
 - UML (Mermaid)
-- Padrões de Projeto (Interfaces, Composição)
+- vscode
 
 ## Autor
 
